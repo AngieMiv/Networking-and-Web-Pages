@@ -1,0 +1,61 @@
+/* style.css - Styling for the Networking and Web Pages project */
+
+/* Basic reset and layout */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #f9f9f9;
+	color: #333;
+	padding: 2rem;
+	max-width: 900px;
+	margin: auto;
+  }
+  
+  header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+  }
+  
+  h1, h2 {
+	color: #004080;
+  }
+  
+  button#language-toggle {
+	padding: 0.4rem 0.8rem;
+	border: none;
+	background: #004080;
+	color: white;
+	border-radius: 6px;
+	cursor: pointer;
+  }
+  
+  section {
+	margin-bottom: 2.5rem;
+  }
+  
+  footer {
+	margin-top: 2rem;
+	text-align: center;
+	font-style: italic;
+	color: #666;
+  }
+  
+  img {
+	max-width: 100%;
+	margin-top: 1rem;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Language visibility */
+  .lang-es {
+	display: none;
+  }
+  
