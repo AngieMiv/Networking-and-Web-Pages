@@ -2,60 +2,118 @@
 
 /* Basic reset and layout */
 * {
-	margin: 0;
-	padding: 0;
+	/* To set that all element's height and width includes
+	the margin and padding */
 	box-sizing: border-box;
-  }
-  
-  body {
-	font-family: 'Segoe UI', sans-serif;
-	background-color: #f9f9f9;
-	color: #333;
-	padding: 2rem;
-	max-width: 900px;
-	margin: auto;
-  }
-  
-  header {
+}
+
+body {
+	/* The browser puts a margin by default to the body, so we set it to 0 */
+	margin: 15px;
+
+	/* Converting the body to a flex container*/
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	/* Imported font from google*/
+	font-family: monospace, "Manrope", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+
+	color: rgb(5, 3, 47);
+
+	/* Fixed color background applied, but the visible background will be 
+	the linear-gradient with the background-image*/
+	background-color: rgb(15, 34, 34);
+	background-image: linear-gradient(darkslateblue, aqua);
+	background-repeat: no-repeat;
+}
+
+header {
+	/* The way to put something to the left and another to the right,
+	the to-go flex and space-between */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 2rem;
-  }
-  
-  h1, h2 {
-	color: #004080;
-  }
-  
-  button#language-toggle {
-	padding: 0.4rem 0.8rem;
-	border: none;
-	background: #004080;
-	color: white;
-	border-radius: 6px;
-	cursor: pointer;
-  }
-  
-  section {
-	margin-bottom: 2.5rem;
-  }
-  
-  footer {
-	margin-top: 2rem;
+	padding: 10px;
+}
+
+h1 {
+	background-color: violet;
+	color: navy;
+	padding: 10px;
+	border-radius: 10px;
 	text-align: center;
-	font-style: italic;
-	color: #666;
-  }
-  
-  img {
-	max-width: 100%;
+}
+
+h2 {
+	margin-left: 5%;
+	color: navy;
+	background-color: pink;
+	padding: 5px;
+	border-radius: 8px;
+}
+
+button#language-toggle {
+	border: purple;
+	border-style: dotted;
+	border-radius: 8px;
+	color: purple;
+	font-family: Monospace, "Manrope";
+
+	background-color: goldenrod;
+	text-align: center;
+	font-size: 0.8em;
+	margin: 10px;
+	padding: 5px;
+
+	/* For the color transition and to change the cursor
+	when hovering */
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+button#language-toggle:hover {
+	background-color: greenyellow;
+}
+
+section {
+	margin: 15px;
+	margin-bottom: 1.5rem;
+}
+
+footer {
+	/* Using flex to align the content to the right and spacing it
+	in case there's more than one element with space-between */
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px 20px;
+	color: antiquewhite;
+	background-color: rgb(15, 34, 34);
+	text-align: right;
+}
+
+img {
+	display: flex;
+	justify-self: center;
+	max-width: 70%;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Language visibility */
-  .lang-es {
+}
+
+
+/* Visibility classes (talking about the language in this case)*/
+.hidden {
 	display: none;
-  }
-  
+}
+
+.visible {
+	display: inline-block;
+}

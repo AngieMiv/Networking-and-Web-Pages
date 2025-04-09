@@ -1,89 +1,149 @@
 <!--
   Project: Networking and Web Pages
   Description: Bilingual website (EN/ES) that explains how web access works across network layers.
-  Technologies: HTML, CSS, JavaScript, GitHub Pages, Docker, Apache
+  Technologies: HTML, CSS, JavaScript, GitHub Pages (Docker, Apache)
   Comments: Written in English for documentation best practices
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Networking and Web Pages</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Networking and Web Pages</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+	<!-- Import MANROPE font from Google-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1 class="lang-en">How does the Web work?</h1>
-    <h1 class="lang-es">¿Cómo funciona la Web?</h1>
-    <!-- Language toggle button -->
-    <button id="language-toggle" aria-label="Toggle language">🌐</button>
-  </header>
+	<header>
+		<h1 class="lang-en">How does the Web work?</h1>
+		<h1 class="lang-es">¿Cómo funciona la Web?</h1>
+		<!-- Language toggle button -->
+		<button id="language-toggle" aria-label="Toggle language">🌐 Idioma / Language 🌐</button>
+	</header>
 
-  <main>
-    <!-- SECTION: Introduction -->
-    <section>
-      <h2 class="lang-en">Introduction</h2>
-      <h2 class="lang-es">Introducción</h2>
-      <p class="lang-en">
-        This project explains how a browser accesses a site like <code>https://mypage.net</code>,
-        covering all network layers and involved technologies.
-      </p>
-      <p class="lang-es">
-        Este proyecto explica cómo un navegador accede a una web como <code>https://mypage.net</code>,
-        cubriendo todas las capas de red y tecnologías implicadas.
-      </p>
-    </section>
+	<main>
+		<!-- SECTION: Introduction -->
+		<section>
+			<h2 class="lang-en">Introduction</h2>
+			<h2 class="lang-es">Introducción</h2>
+			<p class="lang-en">
+				This project explains how a browser accesses a site like <a href="https://librebits.info/#home" target="_blank">
+					librebits.info</a>, covering all network layers and involved technologies.
+			</p>
+			<p class="lang-es">
+				Este proyecto explica cómo un navegador accede a una web como <a href="https://librebits.info/#home" target="_blank">
+					librebits.info</a>, cubriendo todas las capas de red y tecnologías implicadas.
+			</p>
+		</section>
 
-    <!-- SECTION: Network Stack -->
-    <section>
-      <h2 class="lang-en">The Network Stack</h2>
-      <h2 class="lang-es">La Pila de Red</h2>
-      <img src="assets/network-stack.png" alt="Network Stack Diagram">
-      <p class="lang-en">
-        We follow the path from your browser to the server using protocols like DNS, TCP/IP and HTTP.
-      </p>
-      <p class="lang-es">
-        Seguimos el recorrido desde tu navegador hasta el servidor usando protocolos como DNS, TCP/IP y HTTP.
-      </p>
-    </section>
+		<!-- SECTION: Network Stack -->
+		<section>
+			<h2 class="lang-en">The Network Stack</h2>
+			<h2 class="lang-es">La Pila de Red</h2>
+			<img src="assets/network-stack.png" alt="Network Stack Diagram">
+			<p class="lang-en">
+				We follow the path from your browser to the server using protocols like DNS, TCP/IP and HTTP.
+			</p>
+			<p class="lang-es">
+				Seguimos el recorrido desde tu navegador hasta el servidor usando protocolos como DNS, TCP/IP y HTTP.
+			</p>
+		</section>
 
-    <!-- SECTION: Free Software Tools -->
-    <section>
-      <h2 class="lang-en">Free Software vs Proprietary Tools</h2>
-      <h2 class="lang-es">Software Libre vs Herramientas Privativas</h2>
-      <p class="lang-en">
-        This project was mostly built using free/open-source tools: VS Code, Git, Docker, Apache and GitHub Pages.
-      </p>
-      <p class="lang-es">
-        Este proyecto fue construido mayormente usando herramientas libres: VS Code, Git, Docker, Apache y GitHub Pages.
-      </p>
-      <ul>
-        <li class="lang-en"><strong>Free tools:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
-        <li class="lang-es"><strong>Herramientas libres:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
-        <li class="lang-en"><strong>Non-free (used optionally):</strong> macOS, GitHub</li>
-        <li class="lang-es"><strong>No libres (usadas opcionalmente):</strong> macOS, GitHub</li>
-      </ul>
-    </section>
+		<section>
+			<h2 class="lang-en">Accessing the Web</h2>
+			<h2 class="lang-es">Accediendo a la Web</h2>
+			<p class="lang-en">
+				When someone enters a website URL, several steps happen behind the scenes:
+			</p>
+			<p class="lang-es">
+				Cuando alguien escribe la dirección de una web, ocurren varios pasos en segundo plano:
+			</p>
+			<ol class="lang-en">
+				<li><strong>DNS</strong> translates the domain name to an IP address.</li>
+				<li><strong>TCP/IP</strong> establishes a connection with the server.</li>
+				<li><strong>HTTP</strong> requests the HTML/CSS/JS content from the server.</li>
+				<li><strong>Web server (Apache/Nginx)</strong> sends the requested files.</li>
+				<li><strong>Linux (Debian/Ubuntu)</strong> runs the server and hosts the files.</li>
+			</ol>
+			<ol class="lang-es">
+				<li><strong>DNS</strong> traduce el nombre de dominio a una dirección IP.</li>
+				<li><strong>TCP/IP</strong> establece una conexión con el servidor.</li>
+				<li><strong>HTTP</strong> solicita el contenido HTML/CSS/JS al servidor.</li>
+				<li><strong>Servidor web (Apache/Nginx)</strong> envía los archivos solicitados.</li>
+				<li><strong>Linux (Debian/Ubuntu)</strong> ejecuta el servidor y aloja los archivos.</li>
+			</ol>
+		</section>
 
-    <!-- SECTION: Hosting -->
-    <section>
-      <h2 class="lang-en">How is this page hosted?</h2>
-      <h2 class="lang-es">¿Cómo está alojada esta página?</h2>
-      <p class="lang-en">
-        It is hosted using GitHub Pages (free static site hosting), and could also be served locally with Apache inside Docker.
-      </p>
-      <p class="lang-es">
-        Está alojada usando GitHub Pages (hosting gratuito de sitios estáticos), y también podría servirse localmente con Apache dentro de Docker.
-      </p>
-    </section>
-  </main>
+		<!-- SECTION: Hosting -->
+		<section>
+			<h2 class="lang-en">How is this page hosted?</h2>
+			<h2 class="lang-es">¿Cómo está alojada esta página?</h2>
+			<p class="lang-en">
+				It is hosted using GitHub Pages (free static site hosting), and could also be served locally with Apache
+				inside Docker.
+			</p>
+			<p class="lang-es">
+				Está alojada usando GitHub Pages (hosting gratuito de sitios estáticos), y también podría servirse
+				localmente con Apache dentro de Docker.
+			</p>
+		</section>
 
-  <footer>
-    <p class="lang-en">Built with ❤️</p>
-    <p class="lang-es">Desarrollado con ❤️</p>
-  </footer>
+		<!-- SECTION: Free Software Tools -->
+		<section>
+			<h2 class="lang-en">Free Software vs Proprietary Tools</h2>
+			<h2 class="lang-es">Software Libre vs Herramientas Privativas</h2>
+			<p class="lang-en">
+				This project was mostly built using free/open-source tools: VS Code, Git, Docker, Apache and GitHub
+				Pages.
+			</p>
+			<p class="lang-es">
+				Este proyecto fue construido mayormente usando herramientas libres: VS Code, Git, Docker, Apache y
+				GitHub Pages.
+			</p>
+			<ul>
+				<li class="lang-en"><strong>Free tools:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
+				<li class="lang-es"><strong>Herramientas libres:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
+				<li class="lang-en"><strong>Non-free (used optionally):</strong> macOS, GitHub</li>
+				<li class="lang-es"><strong>No libres (usadas opcionalmente):</strong> macOS, GitHub</li>
+			</ul>
+		</section>
+
+	<!-- SECTION: Apache on Debian Example -->
+	<section>
+		<h2 class="lang-en">Example: Apache on Debian</h2>
+		<h2 class="lang-es">Ejemplo: Apache en Debian</h2>
+		<p class="lang-en">
+			To serve this webpage from your own Linux machine:
+		</p>
+		<p class="lang-es">
+			Para servir esta página desde tu propio equipo con Linux:
+		</p>
+		<ul class="lang-en">
+			<li>Install Apache: <code>sudo apt install apache2</code></li>
+			<li>Place your files in: <code>/var/www/html/</code></li>
+			<li>Access via: <code>http://your-ip-address</code></li>
+		</ul>
+		<ul class="lang-es">
+			<li>Instala Apache: <code>sudo apt install apache2</code></li>
+			<li>Coloca tus archivos en: <code>/var/www/html/</code></li>
+			<li>Accede desde otra máquina: <code>http://tu-dirección-ip</code></li>
+		</ul>
+	</section>
+
+	</main>
+
+
+	<footer>
+		<p class="lang-en">Built with ❤️</p>
+		<p class="lang-es">Desarrollado con ❤️</p>
+	</footer>
 </body>
+
 </html>

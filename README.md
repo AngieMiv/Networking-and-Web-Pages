@@ -1,3 +1,5 @@
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Active-brightgreen)](https://AngieMiv.github.io/Networking-and-Web-Pages/)
+
 # 🌐 Networking and Web Pages / Redes y Páginas Web
 
 Proyecto educativo creado para la asignatura de **Sistemas Informáticos**. Esta página web bilingüe (🇺🇸 English / 🇪🇸 Español) explica cómo se accede a una web desde el navegador, incluyendo protocolos de red, herramientas libres y opciones de hosting.
@@ -42,7 +44,7 @@ You can either:
 
 ### 📌 Descripción
 
-Este proyecto explica cómo un navegador puede acceder a una web como `https://mypage.net` a través de las diferentes capas de la red. Está pensado como material educativo para aprender conceptos básicos de redes y páginas web.
+Este proyecto explica cómo un navegador puede acceder a una web como `https://librebits.info/#home` a través de las diferentes capas de la red. Está pensado como material educativo para aprender conceptos básicos de redes y páginas web.
 
 ### 🧱 Tecnologías utilizadas
 
