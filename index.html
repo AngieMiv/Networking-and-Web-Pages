@@ -25,7 +25,7 @@
 		<h1 class="lang-en">How does the Web work?</h1>
 		<h1 class="lang-es">¿Cómo funciona la Web?</h1>
 		<!-- Language toggle button -->
-		<button id="language-toggle" aria-label="Toggle language">🌐 Idioma / Language 🌐</button>
+		<button id="language-toggle" aria-label="Toggle language">🌐 Cambiar Idioma 🇪🇸 / Change Language 🇺🇸 🌐</button>
 	</header>
 
 	<main>
@@ -34,11 +34,13 @@
 			<h2 class="lang-en">Introduction</h2>
 			<h2 class="lang-es">Introducción</h2>
 			<p class="lang-en">
-				This project explains how a browser accesses a site like <a href="https://librebits.info/#home" target="_blank">
+				This project explains how a browser accesses a site like <a href="https://librebits.info/#home"
+					target="_blank">
 					librebits.info</a>, covering all network layers and involved technologies.
 			</p>
 			<p class="lang-es">
-				Este proyecto explica cómo un navegador accede a una web como <a href="https://librebits.info/#home" target="_blank">
+				Este proyecto explica cómo un navegador accede a una web como <a href="https://librebits.info/#home"
+					target="_blank">
 					librebits.info</a>, cubriendo todas las capas de red y tecnologías implicadas.
 			</p>
 		</section>
@@ -47,7 +49,9 @@
 		<section>
 			<h2 class="lang-en">The Network Stack</h2>
 			<h2 class="lang-es">La Pila de Red</h2>
-			<img src="assets/network-stack.png" alt="Network Stack Diagram">
+			<div class="img-container">
+				<img src="assets/network-stack.png" alt="Network Stack Diagram">
+			</div>
 			<p class="lang-en">
 				We follow the path from your browser to the server using protocols like DNS, TCP/IP and HTTP.
 			</p>
@@ -107,38 +111,43 @@
 				Este proyecto fue construido mayormente usando herramientas libres: VS Code, Git, Docker, Apache y
 				GitHub Pages.
 			</p>
-			<ul>
-				<li class="lang-en"><strong>Free tools:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
-				<li class="lang-es"><strong>Herramientas libres:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
-				<li class="lang-en"><strong>Non-free (used optionally):</strong> macOS, GitHub</li>
-				<li class="lang-es"><strong>No libres (usadas opcionalmente):</strong> macOS, GitHub</li>
+
+			<!-- List in English -->
+			<ul class="icon-bullet lang-en">
+				<li><strong>Free tools:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
+				<li><strong>Non-free:</strong> macOS, GitHub</li>
+			</ul>
+
+			<!-- Lista en español -->
+			<ul class="icon-bullet lang-es">
+				<li><strong>Herramientas libres:</strong> Ubuntu, Apache, HTML/CSS/JS</li>
+				<li><strong>No libres:</strong> macOS, GitHub</li>
 			</ul>
 		</section>
 
-	<!-- SECTION: Apache on Debian Example -->
-	<section>
-		<h2 class="lang-en">Example: Apache on Debian</h2>
-		<h2 class="lang-es">Ejemplo: Apache en Debian</h2>
-		<p class="lang-en">
-			To serve this webpage from your own Linux machine:
-		</p>
-		<p class="lang-es">
-			Para servir esta página desde tu propio equipo con Linux:
-		</p>
-		<ul class="lang-en">
-			<li>Install Apache: <code>sudo apt install apache2</code></li>
-			<li>Place your files in: <code>/var/www/html/</code></li>
-			<li>Access via: <code>http://your-ip-address</code></li>
-		</ul>
-		<ul class="lang-es">
-			<li>Instala Apache: <code>sudo apt install apache2</code></li>
-			<li>Coloca tus archivos en: <code>/var/www/html/</code></li>
-			<li>Accede desde otra máquina: <code>http://tu-dirección-ip</code></li>
-		</ul>
-	</section>
+		<!-- SECTION: Apache on Debian Example -->
+		<section>
+			<h3 class="lang-en">Example: Apache on Debian</h3>
+			<h3 class="lang-es">Ejemplo: Apache en Debian</h3>
+			<p class="lang-en">
+				To serve this webpage from your own Linux machine:
+			</p>
+			<p class="lang-es">
+				Para servir esta página desde tu propio equipo con Linux:
+			</p>
+			<ul class="lang-en">
+				<li>Install Apache: <code>sudo apt install apache2</code></li>
+				<li>Place your files in: <code>/var/www/html/</code></li>
+				<li>Access via: <code>http://your-ip-address</code></li>
+			</ul>
+			<ul class="lang-es">
+				<li>Instala Apache: <code>sudo apt install apache2</code></li>
+				<li>Coloca tus archivos en: <code>/var/www/html/</code></li>
+				<li>Accede desde otra máquina: <code>http://tu-dirección-ip</code></li>
+			</ul>
+		</section>
 
 	</main>
-
 
 	<footer>
 		<p class="lang-en">Built with ❤️</p>

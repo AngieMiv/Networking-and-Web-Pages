@@ -12,9 +12,13 @@ body {
 	margin: 15px;
 
 	/* Converting the body to a flex container*/
+	/*
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 100vh; 
+	*/
+	/* This should be block by default 
+	display: block; */
 
 	/* Imported font from google*/
 	font-family: monospace, "Manrope", sans-serif;
@@ -32,8 +36,8 @@ body {
 }
 
 header {
-	/* The way to put something to the left and another to the right,
-	the to-go flex and space-between */
+	/* To put something to the left and another to the right,
+	the to-go is with display:flex and justify-content: space-between */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -49,11 +53,21 @@ h1 {
 }
 
 h2 {
-	margin-left: 5%;
-	color: navy;
+	margin-left: 15px;
+	color: rgb(17, 17, 173);
 	background-color: pink;
 	padding: 5px;
 	border-radius: 8px;
+}
+
+h3 {
+	margin-left: 25px;
+	color: navy;
+	background-color: #ffd6e7;
+	padding: 4px 8px;
+	border-radius: 6px;
+	font-weight: 500;
+	font-size: 1.1em;
 }
 
 button#language-toggle {
@@ -80,8 +94,26 @@ button#language-toggle:hover {
 }
 
 section {
+	display: block; /* To ensure that section is block-level*/
+	border-style: dotted;
+	border-color: navy;
 	margin: 15px;
-	margin-bottom: 1.5rem;
+	padding:10px;
+}
+
+h3, p, ul {
+    margin-bottom: 20px; /* Add space between h3, p, and ul */
+}
+
+ul.icon-bullet {
+    list-style: none; /* Removes the default icon-bullet*/
+    padding-left: 0; /* Deletes the extra padding on the left */
+}
+
+ul.icon-bullet li::before {
+    content: "🐧 "; /* Emoji or Icon */
+    display: inline-block;
+    margin-right: 8px; /* Space between the icon-bullet and the text */
 }
 
 footer {
@@ -94,14 +126,19 @@ footer {
 
 	padding: 10px 20px;
 	color: antiquewhite;
-	background-color: rgb(15, 34, 34);
+	background-color: darkslateblue;
 	text-align: right;
 }
 
-img {
+.img-container {
 	display: flex;
-	justify-self: center;
-	max-width: 70%;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	max-width: 600px;
+	width: 100%;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	border-radius: 12px;
@@ -114,6 +151,3 @@ img {
 	display: none;
 }
 
-.visible {
-	display: inline-block;
-}

@@ -17,13 +17,11 @@ function switchLanguage(lang) {
 
   // Loop through all Spanish elements
   esElements.forEach(el => {
-    el.classList.toggle('visible', lang === 'es');
     el.classList.toggle('hidden', lang !== 'es');
   });
 
   // Loop through all English elements
   enElements.forEach(el => {
-    el.classList.toggle('visible', lang === 'en');
     el.classList.toggle('hidden', lang !== 'en');
   });
 
